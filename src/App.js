@@ -39,13 +39,14 @@ function App() {
       </header>
       <div className="results">
         {results.map( (result, i) => {
+          const url = `https://en.wikipedia.org/?curid=${result.pageid}`;
+
+
           return (
             <div className="result" key={i}>
             <h3>{result.title}</h3>
-            <p>
-              {result.snippet}
-            </p>
-            <a href="#">Read More</a>
+            <p dangerouslySetInnerHTML={{ __html: result.snippet }}></p>
+            <a href={url} target="_blank" rel="noreferrer">Read more</a>
           </div>
           )
         })}
