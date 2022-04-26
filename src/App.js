@@ -5,11 +5,12 @@ function App() {
         <h1>Wikipedia Seeker</h1>
         <form className="search-box">
           <input type="search" placeholder="What are you looking for?" />
-          <p>Search Results: 0</p>
+          
         </form>
+        <p>Search Results: 0</p>
       </header>
       <div className="results">
-        <div className="results">
+        <div className="result">
           <h3>Title Goes Here</h3>
           <p>
             Lorem Ipsum dolor sit amet
